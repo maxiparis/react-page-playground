@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {Container, Navbar, Stack} from "react-bootstrap";
 
-export default function MyName({ myName = "Guest" }) {
+export default function MainTemplate({ myName = "Guest" }) {
     return (
         <div className="d-flex flex-column vh-100">
             {/* Navbar */}
@@ -13,14 +13,9 @@ export default function MyName({ myName = "Guest" }) {
 
             {/* Main Content */}
             <Container className="d-flex flex-grow-1 justify-content-center align-items-center">
-                <Stack className="justify-content-center align-items-center">
+                {/*<Stack className="justify-content-center align-items-center">*/}
                     <h1 className="m-5">Hello, {myName || "Guest"}!</h1>
-                    {/*<h1 className="m-5">Hello, {myName || "Guest"}!</h1>*/}
-                    {/*<h1 className="m-5">Hello, {myName || "Guest"}!</h1>*/}
-                    {/*<h1 className="m-5">Hello, {myName || "Guest"}!</h1>*/}
-                    {/*<h1 className="m-5">Hello, {myName || "Guest"}!</h1>*/}
-                    {/*<h1 className="m-5">Hello, {myName || "Guest"}!</h1>*/}
-                </Stack>
+                {/*</Stack>*/}
             </Container>
 
             {/* Footer */}
@@ -35,7 +30,7 @@ export default function MyName({ myName = "Guest" }) {
 }
 
 // Prop validation
-MyName.propTypes = {
+MainTemplate.propTypes = {
     myName: PropTypes.string,
     variant: PropTypes.string, // Allows customizing the color theme of the Alert
 };
